@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heads Up Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Setup Screen -->
+        <section id="setup-screen" class="screen active">
+            <h1>Heads Up!</h1>
+            <p>Enter words separated by commas or newlines:</p>
+            <textarea id="words-input" placeholder="e.g. Apple, Banana, Dog, Cat, Running, Jumping"></textarea>
+            <button id="start-btn" class="primary-btn">Start Game</button>
+        </section>
+
+        <!-- Game Screen -->
+        <section id="game-screen" class="screen">
+            <div class="top-bar">
+                <div id="timer" class="timer">60</div>
+                <div class="score-display">Score: <span id="current-score">0</span></div>
+            </div>
+            
+            <div class="word-container">
+                <h2 id="current-word">Word</h2>
+            </div>
+            
+            <div class="controls">
+                <button id="false-btn" class="game-btn false-btn">FALSE</button>
+                <button id="correct-btn" class="game-btn correct-btn">CORRECT</button>
+            </div>
+        </section>
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="screen">
+            <h1>Game Over!</h1>
+            <p>Your Final Score:</p>
+            <div id="final-score" class="huge-score">0</div>
+            <button id="restart-btn" class="primary-btn">Play Again</button>
+            <button id="new-words-btn" class="secondary-btn">Enter New Words</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
